@@ -11,9 +11,13 @@
 }
 .transition{
     height: 50vh;
-    background: linear-gradient(rgba(243, 241, 236, 0), rgb(243, 241, 236));
+    background: linear-gradient(rgba(243, 241, 236, 0), rgb(49, 31, 68));
 }
 
 .pt400{
     padding-top: 600px;
 }
+/* .transition-color {
+    height: 600px;
+    background: linear-gradient(rgba(243, 241, 236, 0), rgb(49, 31, 68));
+} */

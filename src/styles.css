@@ -5,4 +5,12 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #311f44;
   }
+
+h2 {
+  font-family: "Amatic SC", sans-serif;
+  letter-spacing: 0.2em;
+  color: #eab9ddab;
+  font-weight: 400;
+}

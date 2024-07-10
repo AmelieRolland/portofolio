@@ -1,0 +1,12 @@
+
+
+/* .bg-color {
+    background-image: url('../../../public/img/bg-project.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+} */
+ section{
+    background-color: rgba(240, 248, 255, 0);
+    z-index: 2;
+ }

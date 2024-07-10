@@ -1,10 +1,12 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { TransitionFirstComponent } from '../transition-first/transition-first.component';
+import { skip } from 'rxjs';
+import { SkillsComponent } from '../skills/skills.component';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [TransitionFirstComponent],
+  imports: [TransitionFirstComponent, SkillsComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
