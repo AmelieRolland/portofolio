@@ -1,0 +1,19 @@
+.h100vh{
+    height: 100vh;
+}
+
+.transparent {
+    /* height: 100vh; */
+    width: 80%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.transition{
+    height: 50vh;
+    background: linear-gradient(rgba(243, 241, 236, 0), rgb(243, 241, 236));
+}
+
+.pt400{
+    padding-top: 600px;
+}

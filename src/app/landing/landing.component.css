@@ -1,0 +1,23 @@
+section {
+height: 100vh;
+background-image: url(../../../public/img/bg-pink.jpg);
+background-size: cover;
+
+}
+.welcome {
+    
+    font-size: 3rem;
+}
+.transition-opacity {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .opacity-0 {
+    opacity: 0;
+  }
+  
+  .opacity-100 {
+    opacity: 1;
+  }
+
+  
