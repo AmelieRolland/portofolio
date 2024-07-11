@@ -27,4 +27,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.onScroll(new Event('scroll')); // Ensure the background is set correctly on load
   }
+
+
 }

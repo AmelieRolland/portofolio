@@ -10,8 +10,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet"></head>
 <body>
   <app-root></app-root>
 </body>
 </html>
+<script>
+  AOS.init();
+        window.addEventListener('scroll', function() {
+            var changingText = document.getElementById('changingText');
+            var scrollPosition = window.scrollY;
+
+            // Change the text color based on scroll position
+            if (scrollPosition > 100) {
+                changingText.classList.add('text-color-scroll');
+                changingText.classList.remove('text-color-initial');
+            } else {
+                changingText.classList.remove('text-color-scroll');
+                changingText.classList.add('text-color-initial');
+            }
+        });
+</script>
