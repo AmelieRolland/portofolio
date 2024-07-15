@@ -9,7 +9,7 @@
           <img class="object-cover w-full h-auto rounded-lg" [src]="'../../../img/' + whoami.img" [alt]="whoami.title">
         </div>
       </div>
-      <div *ngIf="selectedWhoamI" class="mx-4 sm:mx-8 mt-8 p-4 sm:p-8 rounded-lg border-gradient backdrop-blur rounded-lg shadow dark:bg-pink-300/20 dark:hover:bg-pink-300/20">
+      <div *ngIf="selectedWhoamI" class="rounded-lg sm:mx-8 mt-8 p-4 sm:p-8 rounded-lg border-gradient backdrop-blur rounded-lg shadow dark:bg-pink-300/20 dark:hover:bg-pink-300/20">
         <h3 class="text-3xl font-bold mb-4 sm:mb-8">{{ selectedWhoamI.title }}</h3>
         <div [innerHTML]="selectedWhoamI.description"></div>
       </div>

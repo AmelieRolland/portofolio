@@ -2,7 +2,7 @@ section {
     height: 100%;
     background-image: url('../../../public/img/bg-project.png');
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
 
 }
 .transition-color {
