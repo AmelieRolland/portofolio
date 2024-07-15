@@ -16,5 +16,12 @@ section {
       rgba(49, 31, 68, 0) 100%
     );
   }
+
+  @media (max-width: 768px) {
+    section {
+      background-image: url('../../../public/img/mobilebg.png');
+      background-size: cover;
+    }
+  }
   
 
