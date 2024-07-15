@@ -1,23 +1,22 @@
 <section>
     <div class="container mx-auto px-4 lg:px-28">
-        <h2 class="text-5xl py-16">WHOAMI</h2>
-
-        <div class="grid grid-cols-4 gap-x-10">
-
-            <div data-aos="slide-up" data-aos-duration = "600" data-aos-delay= "200" class="opacity-50 hover:opacity-100 backdrop-blur rounded-lg shadow dark:bg-pink-300/10 dark:hover:bg-pink-300/20 p-4">
-                <h5 class="text-2xl font-bold text-gray-900 dark:text-white">Column 1</h5>
-                <p class="text-gray-700 dark:text-gray-400">Content for column 1</p>
-            </div>
-
-            <div data-aos="slide-up" data-aos-duration = "600" data-aos-delay= "300" class="opacity-50 hover:opacity-100 backdrop-blur rounded-lg shadow dark:bg-pink-300/10 dark:hover:bg-pink-300/20 p-4">
-                <img src="../../../img/retail.jpg" alt="">
-            </div>
-            <div data-aos="slide-up" data-aos-duration = "600" data-aos-delay= "400" class="opacity-50 hover:opacity-100 backdrop-blur rounded-lg shadow dark:bg-pink-300/10 dark:hover:bg-pink-300/20 p-4">
-                <img src="../../../img/mexique.jpg" alt="">
-            </div>
-            <div data-aos="slide-up" data-aos-duration = "600" data-aos-delay= "500" class="opacity-50 hover:opacity-100 backdrop-blur rounded-lg shadow dark:bg-pink-300/10 dark:hover:bg-pink-300/20 p-4">
-                <img src="../../../img/bricolage.JPG" alt="">
-            </div>
+      <h2 class="text-5xl py-16 ">WHOAMI</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
+        <div *ngFor="let whoami of whoamiList; let i = index" (click)="toggleDescription(i)"
+          [ngClass]="{'opacity-50': !whoami.isActive, 'opacity-100': whoami.isActive}"
+          class="opacity-50 hover:opacity-100 backdrop-blur rounded-lg shadow dark:bg-pink-300/10 dark:hover:bg-pink-300/20 p-4 cursor-pointer"
+          data-aos="slide-up" data-aos-duration="600" [attr.data-aos-delay]="(i + 1) * 100">
+          <img class="object-cover w-full h-auto rounded-lg" [src]="'../../../img/' + whoami.img" [alt]="whoami.title">
         </div>
+      </div>
+      <div *ngIf="selectedWhoamI" class="mx-4 sm:mx-8 mt-8 p-4 sm:p-8 rounded-lg border-gradient backdrop-blur rounded-lg shadow dark:bg-pink-300/20 dark:hover:bg-pink-300/20">
+        <h3 class="text-3xl font-bold mb-4 sm:mb-8">{{ selectedWhoamI.title }}</h3>
+        <div [innerHTML]="selectedWhoamI.description"></div>
+      </div>
     </div>
-</section>
+  </section>
+  
+  <script>
+    AOS.init();
+  </script>
+  

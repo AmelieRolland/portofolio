@@ -1,1 +1,11 @@
-
+.border-gradient {
+    border-width: 8px;
+    border-style: solid;
+    border-radius: 20px;
+    border-image: linear-gradient(to right, rgba(219, 39, 120, 0.742), rgba(155, 22, 232, 0.655));
+    border-image-slice: 1;
+  }
+  .op:active, .op:clicked, .op:hover {
+    opacity: 100%;  
+  }
+  

@@ -1,32 +1,37 @@
 <section>
     <div class="container mx-auto px-4 lg:px-28 bg-color">
-        <h2 class="py-28 text-5xl">Some projects</h2>
-
-        <div class=" flex flex-wrap justify-between">
-
-            <div *ngFor=" let project of projects; let i = index">
-
-                <a href="#" [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
-                    class="animate-slide my-8 flex flex-col items-center bg-white  rounded-lg shadow md:flex-row w-[35rem] h-[20rem] hover:bg-gray-100 backdrop-blur rounded-lg shadow dark:bg-pink-300/10 dark:hover:bg-pink-300/20">
-                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                        src="../../../img/{{project.img}}" alt="">
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            {{project.name}}</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-                            technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                    </div>
-                </a>
+      <h2 class="py-28 text-5xl">Some projects</h2>
+  
+      <div class="flex flex-wrap justify-center md:justify-between">
+  
+        <div *ngFor="let project of projects; let i = index" class="w-full md:w-1/2 px-4 mb-8">
+          <a href="#" [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+             class="animate-slide flex flex-col md:flex-row items-center bg-white rounded-lg shadow hover:bg-gray-100 backdrop-blur dark:bg-pink-300/10 dark:hover:bg-pink-300/20 w-full">
+            
+            <div class="flex-shrink-0 w-full md:w-1/2 p-4">
+              <img class="object-contain h-30 sm:h-48 md:h-56 lg:h-48 xl:h-56 rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+                   src="../../../img/{{project.img}}" width="500" alt="">
             </div>
-
-
-           
+            
+            <div class="flex flex-col justify-between p-4 leading-normal w-full md:w-2/3">
+              <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{project.name}}</h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{project.shortDescription}}</p>
+              <div class="flex flex-wrap mt-2">
+                <span *ngFor="let tech of project.stack" 
+                      [ngClass]="getPillClass(tech)"
+                      class="text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">
+                  {{tech}}
+                </span>
+              </div>
+            </div>
+          </a>
         </div>
+  
+      </div>
     </div>
-
-
-
-</section>
-<script>
+  </section>
+  
+  <script>
     AOS.init();
-</script>
+  </script>
+  
