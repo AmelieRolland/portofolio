@@ -19,9 +19,8 @@ section {
     section {
       background-image: url('../../../public/img/mobilebg.png');
       background-size: cover;
-      background-attachment: initial;
-      height: 100vh;
-
+      background-attachment: fixed;
+      width: 100vw;
     }
   }
   
