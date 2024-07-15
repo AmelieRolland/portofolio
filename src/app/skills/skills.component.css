@@ -15,13 +15,13 @@ section {
     );
   }
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     section {
       background-image: url('../../../public/img/mobilebg.png');
       background-size: cover;
       background-attachment: initial;
 
     }
-  }
+  } */
   
 
