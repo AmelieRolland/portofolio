@@ -24,10 +24,8 @@ export class AboutComponent implements OnInit {
 
   toggleDescription(index: number) {
     this.whoamiList.forEach((item, i) => {
-      item.isActive = (i === index && !item.isActive); // Toggle isActive for the clicked item
+      item.isActive = (i === index && !item.isActive);
     });
-
-    // Set selectedWhoamI to show description
     this.selectedWhoamI = this.whoamiList[index];
   }
 }

@@ -15,3 +15,9 @@ export interface WhoamI {
     showDescription: boolean,
     isActive: boolean
 }
+
+export interface Stack {
+    id: number,
+    img: string,
+    title: string,
+}
