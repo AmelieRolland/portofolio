@@ -14,7 +14,7 @@ export const projects = [
         shortDescription : "Générateur aléatoire de citations de femmes inspirantes",
         description: 'A portfolio website', 
         stack: ['Bootstrap', 'PHP', 'SQL'], 
-        img: 'sparkle.png' 
+        img: 'whatdidshesay.png' 
     },
 
     { 
@@ -32,6 +32,6 @@ export const projects = [
         shortDescription : "Changement d'API pour une application météo",
         description: 'A portfolio website', 
         stack: ['NextJs', 'Node.js', 'JavaScript'], 
-        img: 'sparkle.png' 
+        img: 'openmeteo.jpg' 
     },
 ]
