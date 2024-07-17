@@ -2,7 +2,7 @@ export const whoami = [
     {
         id: 1,
         title : 'Une vie de créativité ✨',
-        img: 'mexique.jpg',
+        img: 'artiste.png',
         description: '<p>Une table Nintendo en carton, un tas de petits mobiliers en bois aux formes extra-ordinaires ou sur-mesure, des kilomètres d\'écharpes tricotées, et aujourd\'hui, le numérique est monnouveau terrain de jeu.</p> <p class="text-justify">Comme artiste, je dessine au feutre fin, j\'ai pu exposer en France et au Mexique. Vous pouvez découvrir mon travail ici: <a href="https://www.amelierolland.com" title="site art" target="_blank"><strong>amelierolland.com</strong></a> <br>La musique a également une grande place dans ma vie. Je joue du synthé, de la guitare folk et électrique. J\'ai joué dans des groupes de groove, rock, punk, et folk accoustique. <br>J\'adore lire des romans, des essais, et j\'apprécie tout particulièrement la littérature contemporaine. Parmis mes auteurs préférés, je citerai John Fante, Goliarda Sapienza, Kerouak et Elena Ferrante.</p>',
         showDescription: false,
         isActive: false

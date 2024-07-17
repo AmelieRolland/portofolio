@@ -11,9 +11,9 @@ import { NgClass, NgFor } from '@angular/common';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent implements OnInit {
-  projects:Project[]=[];
+  projects: Project[] = [];
 
-  constructor(private projectService : ProjectsService ) { }
+  constructor(private projectService: ProjectsService) { }
 
   ngOnInit(): void {
     this.projects = this.projectService.getProjects();
@@ -44,6 +44,19 @@ export class ProjectsComponent implements OnInit {
       default:
         return 'bg-gray-200 text-black';
     }
+  }
+
+  selectedProject: any = null;
+  isModalOpen = false;
+
+  openModal(project: any) {
+    this.selectedProject = project;
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedProject = null;
   }
 
 }
