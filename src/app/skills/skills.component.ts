@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectsComponent } from '../projects/projects.component';
 import { AboutComponent } from '../about/about.component';
 import { ContactComponent } from '../contact/contact.component';
-import { Stack } from '../entities';
-import { stack } from '../stack-mock';
+import { Stack } from '../shared/entities';
+import { stack } from '../shared/stack-mock';
 import { NgFor } from '@angular/common';
 
 @Component({

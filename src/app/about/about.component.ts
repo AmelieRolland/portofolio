@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WhoamI } from '../entities';
-import { whoami } from '../whoami-mock';
+import { WhoamI } from '../shared/entities';
+import { whoami } from '../shared/whoami-mock';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 
 

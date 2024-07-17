@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from '../entities';
+import { Project } from '../shared/entities';
 import { ProjectsService } from '../projects.service';
 import { NgClass, NgFor } from '@angular/common';
 
