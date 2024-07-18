@@ -36,15 +36,15 @@
 
 
 
-<!-- Main modal -->
 <div id="large-modal" tabindex="-1" aria-hidden="true"
-  class=" backdrop-blur fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full"
-  [class.hidden]="!isModalOpen">
+class="custom-scroll backdrop-blur fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden h-full modal-container"
+[class.hidden]="!isModalOpen" (click)="closeModalOnOutsideClick($event)">
   <div class="relative w-full max-w-4xl max-h-full">
     <!-- Modal content -->
-    <div class="relative bg-white rounded-lg shadow custom-gradiant">
+    <div class="relative bg-purple-950 rounded-lg shadow custom-gradient max-h-full overflow-hidden">
       <!-- Modal header -->
-      <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+      <div
+        class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 sticky top-0 z-10">
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
           {{selectedProject?.name}}
         </h3>
@@ -55,26 +55,30 @@
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
           </svg>
-          <span class="sr-only">Close modal</span>
+          <span class="sr-only text-">Close modal</span>
         </button>
       </div>
       <!-- Modal body -->
-       <img src="../../../img/{{selectedProject?.img}}" width="500" alt="">
-      <div class="p-4 md:p-5 space-y-4" [innerHTML]="selectedProject?.description">
-          
-        
-        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-          <!-- Ajoute d'autres détails du projet si nécessaire -->
-        </p>
+      <div class="p-4 md:p-5 overflow-y-auto max-h-[calc(100vh-13rem)]">
+        <div class="flex justify-center">
+          <img src="../../../img/{{selectedProject?.img}}" width="600" alt="" class="mx-auto">
+        </div>
+        <div class="mt-4 space-y-4" [innerHTML]="selectedProject?.description">
+        </div>
       </div>
       <!-- Modal footer -->
-      <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+      <div
+        class="flex items-center justify-between p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600 sticky bottom-0 z-10">
+        <a href={{selectedProject?.github}} target="_blank"
+          class=" text-white bg-custom-gradient hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-8 py-4 text-center dark:focus:ring-pink-300">Voir
+          sur GitHub</a>
         <button (click)="closeModal()" type="button"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+          class="text-white bg-custom-gradient hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-8 py-4 text-center dark:focus:ring-pink-300">Close</button>
       </div>
     </div>
   </div>
 </div>
+
 
 
 

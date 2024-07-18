@@ -19,3 +19,12 @@
     background-image: linear-gradient(to right, #5c1c97, #3c016c);
     margin: auto;
  }
+
+ .bg-custom-gradient{
+    background-image: linear-gradient(to right, #f74ac9, #8809f1);
+}
+
+.custom-scroll{
+   scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: rgb(168, 3, 180) rgb(78, 1, 101); 
+}

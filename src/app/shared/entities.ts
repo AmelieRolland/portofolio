@@ -5,6 +5,7 @@ export interface Project {
     description: string,
     stack: string [],
     img: string,
+    github: string,
 }
 
 export interface WhoamI {

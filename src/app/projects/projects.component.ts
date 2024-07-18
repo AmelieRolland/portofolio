@@ -52,11 +52,19 @@ export class ProjectsComponent implements OnInit {
   openModal(project: any) {
     this.selectedProject = project;
     this.isModalOpen = true;
+    document.body.classList.add('overflow-hidden');
   }
 
   closeModal() {
     this.isModalOpen = false;
     this.selectedProject = null;
+    document.body.classList.remove('overflow-hidden');
+  }
+
+  closeModalOnOutsideClick(event: MouseEvent) {
+    if ((event.target as HTMLElement).classList.contains('modal-container')) {
+      this.closeModal();
+    }
   }
 
 }
