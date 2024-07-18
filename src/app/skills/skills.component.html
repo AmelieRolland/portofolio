@@ -1,6 +1,6 @@
 <section id="dynamicSection">
     <div class="transition-color">
-        <div class="nuage2 w-full lg:w-6/12">
+        <div class="nuage2 w-full lg:hidden">
             <div>
                 <img src="../../../img/nuage2.png" width="925" height="925" alt="illustration de nuage" class="w-full h-auto" />
             </div>
@@ -11,17 +11,13 @@
         <h2 class="text-5xl">Code and Craft</h2>
 
         <div class="flex flex-wrap justify-center mt-28">
-            <div *ngFor="let stackItem of stack; let i = index" class="stack-item"
-                [ngStyle]="{'animation-delay': (i * 0.1) + 's'}">
+            <div *ngFor="let stackItem of stack; let i = index" class="stack-item" [ngStyle]="{'animation-delay': (i * 0.1) + 's'}">
                 <img width="120" class="px-4 pb-4" [src]="'../../../img/' + stackItem.img" [alt]="stackItem.title">
             </div>
         </div>
     </div>
 
-
-
     <app-projects></app-projects>
     <app-about></app-about>
     <app-contact></app-contact>
-
 </section>
