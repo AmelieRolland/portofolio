@@ -40,7 +40,7 @@ h5{
     color: white;
 }
 
-p, a {
+p, a, button {
   font-family: 'Courier New', Courier, monospace;
   color : white;
 }
