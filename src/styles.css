@@ -3,11 +3,16 @@
 @tailwind utilities;
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #311f44;
-  }
-  
+  margin: 0;
+  padding: 0;
+  background-color: #311f44;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 h2 {
   font-family: "Amatic SC", sans-serif;
@@ -16,8 +21,13 @@ h2 {
   font-weight: 400;
 }
 
+.container {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 h3 {
-  
+
   font-family: "Amatic SC", sans-serif;
   font-weight: 200;
   font-size: 3em;
@@ -29,18 +39,20 @@ h4 {
   font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   font-style: normal;
-  color:#eab9ddab;
+  color: #eab9ddab;
 }
 
-h5{
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
-    font-size: 1.8em;
-    letter-spacing: 0.2em;
-    color: white;
+h5 {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+  color: white;
 }
 
-p, a, button {
+p,
+a,
+button {
   font-family: 'Courier New', Courier, monospace;
-  color : white;
+  color: white;
 }
