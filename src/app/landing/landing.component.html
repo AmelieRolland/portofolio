@@ -1,16 +1,16 @@
 <div class="min-h-screen">
-  <section class="fixed -z-50 bg-gray-100 min-h-screen" (window:scroll)="onScroll($event)">
-    <div class="container mx-auto px-4 lg:px-28 py-8 h-full flex flex-col lg:flex-row items-center">
+  <section class="fixed -z-50 bg-gray-100 min-h-screen fixed-background" (window:scroll)="onScroll($event)">
+    <div class="container mx-auto  lg:px-28 py-8 h-full flex flex-col lg:flex-row items-center">
       <div class="w-full h-full lg:w-1/2 flex flex-col justify-center items-center lg:order-1 order-2">
-        <div class="photo w-full h-full p-8 lg:p-28">
-          <img src="../../../img/fond-photo.png" alt="">
+        <div class="photo w-full h-full  lg:p-28">
+          <img src="../../../img/fond-photo.png" width="300" alt="" class="w-full h-auto object-cover">
         </div>
       </div>
       <div class="w-full lg:w-1/2 flex flex-col justify-center items-center lg:order-2 order-1">
         <div class="h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           <span id="welcome-text" class="text-xl font-bold text-gray-800 welcome ps-10 transition-opacity opacity-0">Hi ! I'm </span>
           <h1 id="name" class="text-4xl lg:text-6xl font-bold text-gray-900 mt-4 transition-opacity opacity-0">
-            <span><img width="500" src="../../../img/Am-lie-unscreen.gif" alt=""></span>
+            <span><img width="300" src="../../../img/Am-lie-unscreen.gif" alt=""></span>
           </h1>
           <p id="description" class="text-lg lg:text-xl text-gray-700 mt-4 transition-opacity opacity-0">I'm a full-stack developer wannabe, and I love to build websites and apps.</p>
         </div>
@@ -21,3 +21,6 @@
 
 <app-transition-first></app-transition-first>
 <app-skills></app-skills>
+
+
+
