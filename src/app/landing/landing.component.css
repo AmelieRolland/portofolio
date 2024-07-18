@@ -1,9 +1,9 @@
 section {
 height: 100vh;
 background-image: url(../../../public/img/bg-pink.jpg);
-background-size:auto;
+background-size: cover;
 background-position: center;
-background-repeat: no-repeat;
+
 
 }
 .welcome {
@@ -31,8 +31,3 @@ background-repeat: no-repeat;
     color:  #edcfd64f; 
 }
 
-.fixed-background {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
