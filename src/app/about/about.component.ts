@@ -22,10 +22,15 @@ export class AboutComponent implements OnInit {
     image.classList.add('clicked');
 }
 
-  toggleDescription(index: number) {
+toggleDescription(index: number) {
+  if (this.whoamiList[index] === this.selectedWhoamI) {
+    this.whoamiList[index].isActive = false;
+    this.selectedWhoamI = null;
+  } else {
     this.whoamiList.forEach((item, i) => {
-      item.isActive = (i === index && !item.isActive);
+      item.isActive = (i === index);
     });
     this.selectedWhoamI = this.whoamiList[index];
   }
+}
 }
