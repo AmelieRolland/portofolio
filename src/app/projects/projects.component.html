@@ -6,7 +6,7 @@
 
       <div *ngFor="let project of projects; let i = index" class="w-full md:w-1/2 px-4 mb-8">
         <a [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
-          class="cursor-pointer animate-slide flex flex-col md:flex-row items-center bg-white dark:bg-pink-300/10 rounded-lg shadow hover:bg-gray-100 dark:hover:bg-pink-300/20 backdrop-blur w-full"
+          class="cursor-pointer animate-slide flex flex-col md:flex-row items-center rounded-lg shadow hover:bg-gray-100 backdrop-blur bg-pink-300/10 hover:bg-pink-300/20 w-full"
           (click)="openModal(project)">
 
           <div class="flex-shrink-0 w-full md:w-1/2 p-4">
@@ -16,11 +16,11 @@
           </div>
 
           <div class="flex flex-col justify-between p-4 leading-normal w-full md:w-2/3">
-            <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{project.name}}</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{project.shortDescription}}</p>
+            <h5 class="mb-2 text-4xl  font-bold tracking-tight text-white">{{project.name}}</h5>
+            <p class="mb-3 font-normal text-gray-400">{{project.shortDescription}}</p>
             <div class="flex flex-wrap mt-2">
               <span *ngFor="let tech of project.stack" [ngClass]="getPillClass(tech)"
-                class="text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200">
+                class="text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">
                 {{tech}}
               </span>
             </div>
@@ -31,7 +31,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- modal -->
 
