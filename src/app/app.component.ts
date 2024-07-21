@@ -1,5 +1,8 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LanguageService } from './language.service';
+import { whoami } from './shared/whoami-mock';
+import { WhoAmI } from './shared/entities';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +12,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  constructor(private el: ElementRef) {}
+
+  whoami: WhoAmI[] = whoami;
+  constructor(private el: ElementRef, public languageService: LanguageService) {}
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
@@ -25,8 +30,15 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.onScroll(new Event('scroll')); // Ensure the background is set correctly on load
+    this.onScroll(new Event('scroll')); 
   }
+
+  toggleLanguage() {
+    const newLang = this.languageService.getLanguage() === 'fr' ? 'en' : 'fr';
+    this.languageService.setLanguage(newLang);
+  }
+
+
 
 
 }

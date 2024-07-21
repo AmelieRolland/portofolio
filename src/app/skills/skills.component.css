@@ -27,6 +27,59 @@ section {
     }
   }
 
+  .language-toggle-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .language-toggle-fixed button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .language-toggle-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .lang-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .lang-button-fr {
+    background-color: #ef86ed; 
+    color: white;
+  }
+  
+  .lang-button-en {
+    background-color: #a217f3; 
+    color: white;
+  }
+  
+  .lang-button-fr:hover, .lang-button-en:hover {
+    background-color: #f9048f; 
+  }
+  
+  .lang-button-fr:focus, .lang-button-en:focus {
+    outline: 2px solid #f8f5f5; 
+  }
+
+  
+
   
 
   @media (max-width: 768px) {

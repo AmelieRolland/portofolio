@@ -13,6 +13,21 @@
     margin: auto;
     margin-top : 50px;
   }
+
+  .language-toggle-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+  }
+  
+  .language-toggle-fixed button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
   
   @media (max-width: 768px) {
     .about {

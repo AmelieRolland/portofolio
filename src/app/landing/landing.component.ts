@@ -2,15 +2,21 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { TransitionFirstComponent } from '../transition-first/transition-first.component';
 import { skip } from 'rxjs';
 import { SkillsComponent } from '../skills/skills.component';
+import { LanguageService } from '../language.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [TransitionFirstComponent, SkillsComponent],
+  imports: [TransitionFirstComponent, SkillsComponent, NgIf],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
 export class LandingComponent implements OnInit {
+
+  constructor(public languageService: LanguageService) { }
+
+
   ngOnInit() {
     this.onScroll(); 
   }
@@ -32,5 +38,9 @@ export class LandingComponent implements OnInit {
         element.classList.add('opacity-0');
       }
     });
+  }
+
+  setLanguage(lang: 'fr' | 'en') {
+    this.languageService.setLanguage(lang);
   }
 }

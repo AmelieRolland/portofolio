@@ -1,22 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../shared/entities';
 import { ProjectsService } from '../projects.service';
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [NgFor, NgClass],
+  imports: [NgFor, NgClass, NgIf],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
 
-  constructor(private projectService: ProjectsService) { }
+  constructor(private projectService: ProjectsService, public languageService: LanguageService) { }
 
   ngOnInit(): void {
     this.projects = this.projectService.getProjects();
+    console.log(this.projects);
+  }
+
+  getDescription(project: Project): string {
+    return project ? this.languageService.getTranslation(project.description) : '';
+  }
+  
+  getShortDescription(project: Project): string {
+    return project ? this.languageService.getTranslation(project.shortDescription) : '';
   }
 
   getPillClass(tech: string): string {
@@ -66,5 +76,6 @@ export class ProjectsComponent implements OnInit {
       this.closeModal();
     }
   }
+
 
 }

@@ -1,6 +1,7 @@
 <section>
   <div class="container mx-auto px-4 lg:px-28 bg-color">
-    <h2 class="py-28 text-5xl">Some projects</h2>
+    <h2 class="py-28 text-5xl"><span *ngIf="languageService.getLanguage() === 'fr'">QUELQUES PROJETS</span>
+      <span *ngIf="languageService.getLanguage() === 'en'">SOME PROJECTS</span></h2>
 
     <div class="flex flex-wrap justify-center md:justify-between">
 
@@ -8,20 +9,20 @@
         <a [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
           class="cursor-pointer animate-slide flex flex-col md:flex-row items-center rounded-lg shadow hover:bg-gray-100 backdrop-blur bg-pink-300/10 hover:bg-pink-300/20 w-full"
           (click)="openModal(project)">
-
+      
           <div class="flex-shrink-0 w-full md:w-1/2 p-4">
             <img
               class="object-contain h-30 sm:h-48 md:h-56 lg:h-48 xl:h-56 rounded-t-lg md:rounded-l-lg md:rounded-t-none"
               src="../../../img/{{project.img}}" width="500" alt="">
           </div>
-
+      
           <div class="flex flex-col justify-between p-4 leading-normal w-full md:w-2/3">
-            <h5 class="mb-2 text-4xl  font-bold tracking-tight text-white">{{project.name}}</h5>
-            <p class="mb-3 font-normal text-gray-400">{{project.shortDescription}}</p>
+            <h5 class="mb-2 text-4xl font-bold tracking-tight text-white">{{project.name}}</h5>
+            <p class="mb-3 font-normal text-gray-400">{{ getShortDescription(project) }}</p>
             <div class="flex flex-wrap mt-2">
               <span *ngFor="let tech of project.stack" [ngClass]="getPillClass(tech)"
                 class="text-xs font-semibold mr-2 mb-2 px-2.5 py-0.5 rounded">
-                {{tech}}
+                {{ tech }}
               </span>
             </div>
           </div>
@@ -63,7 +64,7 @@ class="custom-scroll backdrop-blur fixed inset-0 z-50 flex items-center justify-
         <div class="flex justify-center">
           <img src="../../../img/{{selectedProject?.img}}" width="600" alt="" class="mx-auto">
         </div>
-        <div class="mt-4 space-y-4" [innerHTML]="selectedProject?.description">
+        <div class="mt-4 space-y-4" [innerHTML]="getDescription(selectedProject) ">
         </div>
       </div>
       <!-- Modal footer -->

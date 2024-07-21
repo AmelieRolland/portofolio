@@ -1,6 +1,7 @@
 <section>
     <div class="container mx-auto px-4 lg:px-28">
       <h2 class="text-5xl py-16 ">WHOAMI</h2>
+
       <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
         <div *ngFor="let whoami of whoamiList; let i = index" (click)="toggleDescription(i)"
           [ngClass]="{'opacity-50': !whoami.isActive, 'opacity-100': whoami.isActive}"
@@ -9,9 +10,9 @@
           <img class="object-cover w-full h-auto rounded-lg" [src]="'../../../img/' + whoami.img" [alt]="whoami.title">
         </div>
       </div>
-      <div *ngIf="selectedWhoamI" class="about sm:mx-8 mt-8 mb-22 p-4 sm:p-8 border-gradient backdrop-blur shadow bg-pink-300/20 hover:bg-pink-300/20">
-        <h3 class="text-3xl font-bold mb-4 sm:mb-8">{{ selectedWhoamI.title }}</h3>
-        <div [innerHTML]="selectedWhoamI.description"></div>
+      <div *ngIf="selectedWhoAmI" class="about sm:mx-8 mt-8 mb-22 p-4 sm:p-8 border-gradient backdrop-blur shadow bg-pink-300/20 hover:bg-pink-300/20">
+        <h3 class="text-3xl font-bold mb-4 sm:mb-8">{{ getTitle(selectedWhoAmI) }}</h3>
+        <div [innerHTML]="getDescription(selectedWhoAmI)"></div>
       </div>
     </div>
   </section>
