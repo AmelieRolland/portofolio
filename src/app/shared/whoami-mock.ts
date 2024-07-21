@@ -18,7 +18,7 @@ export const whoami = [
     {
         id: 3,
         title : '4 ans au Mexique 🌵',
-        img: 'mexique.jpg',
+        img: 'mexique.png',
         description: '<p>J\’ai vécu 4 ans entre 2013 et 2017 à Tlalnepantla, dans la banlieu de Mexico DF. J’ai exercé durant cette période en tant que professeur de français FLE par le biais d’une école privée. J’ai dû apprendre de mon côté des techniques d’enseignement, de pédagogie, afin de réussir ma nouvelle activité de la meilleure manière. </p> <p> En tant qu’artiste, ce furent quatres années très riches; j’ai pu exposer régulièrement mes œuvres dans le Jardìn del Arte grâce à la validation d’un jury. J’ai créé un groupe de musique avec lequel nous faisions des concerts régulièrement. Nous avons aussi eu la chance de pouvoir jouer en live pour une chaîne de télévision locale, et de bénéficier d’un live/interview d’une heure pour une radio.</p>',
         showDescription: false,
         isActive: false
