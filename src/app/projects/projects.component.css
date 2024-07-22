@@ -18,6 +18,6 @@
 }
 
 .custom-scroll{
-   scrollbar-width: thin; /* "auto" or "thin" */
+   scrollbar-width: thin;
   scrollbar-color: rgb(168, 3, 180) rgb(78, 1, 101); 
 }
