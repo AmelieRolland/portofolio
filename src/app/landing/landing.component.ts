@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { TransitionFirstComponent } from '../transition-first/transition-first.component';
 import { skip } from 'rxjs';
 import { SkillsComponent } from '../skills/skills.component';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../shared/language.service';
 import { NgIf } from '@angular/common';
 
 @Component({

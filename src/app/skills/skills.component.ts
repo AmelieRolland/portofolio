@@ -5,7 +5,7 @@ import { ContactComponent } from '../contact/contact.component';
 import { Stack } from '../shared/entities';
 import { stack } from '../shared/stack-mock';
 import { CommonModule, NgFor } from '@angular/common';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../shared/language.service';
 
 @Component({
   selector: 'app-skills',

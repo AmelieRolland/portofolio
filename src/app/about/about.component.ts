@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { whoami } from '../shared/whoami-mock';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { WhoAmI } from '../shared/entities';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../shared/language.service';
 
 
 @Component({

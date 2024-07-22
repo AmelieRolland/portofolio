@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LanguageService } from './language.service';
+import { LanguageService } from './shared/language.service';
 import { whoami } from './shared/whoami-mock';
 import { WhoAmI } from './shared/entities';
 

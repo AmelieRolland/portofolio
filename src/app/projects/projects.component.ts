@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../shared/entities';
-import { ProjectsService } from '../projects.service';
+import { ProjectsService } from '../shared/projects.service';
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../shared/language.service';
 
 @Component({
   selector: 'app-projects',

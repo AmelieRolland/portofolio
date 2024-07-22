@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { projects } from './shared/project-mock';
-import { Project } from './shared/entities';
+import { projects } from './project-mock';
+import { Project } from './entities';
 
 @Injectable({
   providedIn: 'root'

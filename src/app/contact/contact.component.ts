@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../shared/language.service';
 
 @Component({
   selector: 'app-contact',
