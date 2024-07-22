@@ -9,6 +9,7 @@ background-position: center;
 .welcome {
   font-family: "Amatic SC", sans-serif;
     font-size: 3rem;
+
 }
 .transition-opacity {
     transition: opacity 0.5s ease-in-out;
