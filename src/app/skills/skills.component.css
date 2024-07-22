@@ -85,6 +85,7 @@ section {
       background-size: cover;
       background-attachment: fixed;
       width: 100vw;
+      overflow: hidden;
     }
   }
   
