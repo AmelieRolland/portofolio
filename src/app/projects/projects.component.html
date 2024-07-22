@@ -71,10 +71,11 @@ class="custom-scroll backdrop-blur fixed inset-0 z-50 flex items-center justify-
       <div
         class="flex items-center justify-between p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600 sticky bottom-0 z-10">
         <a href={{selectedProject?.github}} target="_blank"
-          class=" text-white bg-custom-gradient hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-8 py-4 text-center dark:focus:ring-pink-300">Voir
-          sur GitHub</a>
+          class=" text-white bg-custom-gradient hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-8 py-4 text-center dark:focus:ring-pink-300"><span *ngIf="languageService.getLanguage() === 'fr'">Voir sur Github</span>
+          <span *ngIf="languageService.getLanguage() === 'en'">Check on Github</span></a>
         <button (click)="closeModal()" type="button"
-          class="text-white bg-custom-gradient hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-8 py-4 text-center dark:focus:ring-pink-300">Close</button>
+          class="text-white bg-custom-gradient hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-lg text-sm px-8 py-4 text-center dark:focus:ring-pink-300"><span *ngIf="languageService.getLanguage() === 'fr'">Fermer</span>
+          <span *ngIf="languageService.getLanguage() === 'en'">Close</span></button>
       </div>
     </div>
   </div>
