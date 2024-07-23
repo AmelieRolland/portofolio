@@ -58,7 +58,7 @@ export const whoami = [
             fr: `<p>Au tout début de la crise covid, je suis une formation en art-thérapie; un rêve de jeunesse et une occasion rêvée. J’ai exercé durant cette année-là dans un EHPAD en tant que stagiaire art-thérapeute.</p> 
                  <p>J’ai eu la chance d’avoir beaucoup de liberté dans mes propositions d’activité, et j’ai ainsi pu monter un atelier de bricolage avec un groupe essentiellement composé de dames, une première pour elles.</p> 
                  <p>Malgré leurs premières réticences et leurs craintes d’échouer, nous avons fabriqué ensemble une boîte à livres qui est aujourd’hui encore à la disposition de la résidence. Une fierté pour ce groupe, et de beaux moments de joie que je garde en souvenir.</p>`,
-            en: `<p>At the very beginning of the covid crisis, I took a course in art therapy; a childhood dream and a dreamed opportunity. During that year, I worked in a nursing home as an art therapy intern.</p> 
+            en: `<p>At the very beginning of the covid crisis, I took a course in art therapy; a childhood dream and a dreamed opportunity. During that year, I worked in a nursing home as an art therapist intern.</p> 
                  <p>I had the chance to have a lot of freedom in my activity proposals, and I was able to set up a DIY workshop with a group mainly composed of ladies, a first for them.</p> 
                  <p>Despite their initial reluctance and fears of failure, we together created a book box that is still available at the residence today. A pride for this group, and beautiful moments of joy that I cherish as memories.</p>`
         },
